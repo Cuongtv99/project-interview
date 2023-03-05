@@ -1,9 +1,10 @@
 import { ApiProperty } from '@nestjs/swagger';
-import { IsEnum, IsString } from 'class-validator';
+import { IsEnum, IsString, IsUUID } from 'class-validator';
 import { UserSelected } from 'src/constants/user-vote.constant';
 
 export class UserVoteDTO {
   @IsString()
+  @IsUUID('4', { each: true })
   readonly userVoteId: string;
 
   @IsEnum(UserSelected)

@@ -1,8 +1,8 @@
 import { Body, Controller, Get, Param, Post } from '@nestjs/common';
 import { ApiOperation, ApiResponse, ApiTags } from '@nestjs/swagger';
-import { UserVoteService } from './user-vote.service';
-import { UserVoteDTO } from './dto/user-vote.dto';
-import { UserVote } from './entities/user-vote.entities';
+import { UserVoteDTO } from '../dto/user-vote.dto';
+import { UserVote } from '../entities/user-vote.entities';
+import { UserVoteService } from '../service/user-vote.service';
 
 @ApiTags('UserVote')
 @Controller('UserVoted')
