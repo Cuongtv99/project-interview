@@ -5,7 +5,7 @@ import { UserSelected } from 'src/constants/user-vote.constant';
 export class UserVoteDTO {
   @IsString()
   @IsUUID('4', { each: true })
-  readonly userVoteId: string;
+  userVoteId: string;
 
   @IsEnum(UserSelected)
   @ApiProperty({
