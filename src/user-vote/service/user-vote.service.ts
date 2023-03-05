@@ -1,10 +1,10 @@
 import { Injectable } from '@nestjs/common';
-import { UserVote } from './entities/user-vote.entities';
-import { UserVoteDTO } from './dto/user-vote.dto';
+import { UserVoteDTO } from '../dto/user-vote.dto';
+import { UserVote } from '../entities/user-vote.entities';
 
 @Injectable()
 export class UserVoteService {
-  private readonly userVote: UserVote[] = [];
+  userVote: UserVote[] = [];
 
   CreateUserVote(userVoteSelected: UserVoteDTO): UserVote {
     this.userVote.push(userVoteSelected);
