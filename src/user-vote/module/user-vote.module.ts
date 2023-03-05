@@ -1,6 +1,6 @@
 import { Module } from '@nestjs/common';
-import { UserVoteController } from './user-vote.controller';
-import { UserVoteService } from './user-vote.service';
+import { UserVoteController } from '../controller/user-vote.controller';
+import { UserVoteService } from '../service/user-vote.service';
 
 @Module({
   controllers: [UserVoteController],
